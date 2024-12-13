@@ -1,0 +1,240 @@
+* {
+    font-family: "IM Fell DW Pica SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #9575cd, #b39ddb, #009688, #00bcd4, #e0f7fa);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-image: linear-gradient(105deg, #00f9ff 39%, rgb(61, 95, 102) 96%);
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+.beatles {
+    width: 20vw;
+}
+
+.titulo {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 3.5rem;
+    margin: 0;
+    padding: 0;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em blue,
+        0 0 0.2em blue;
+    color: white;
+}
+
+.animated-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: radial-gradient(ellipse at center, #e0f7fa, #00bcd4, #009688, #b39ddb, #9575cd);
+    fill: rgba(255, 136, 136, 0.534);
+    fill-opacity: 0.5;
+    animation: svg-animation 5s infinite;
+}
+
+
+@keyframes svg-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    /*background-color: #232f3e;*/
+    background-color: #e0f7fa;
+    padding: 10px 0;
+    text-shadow:
+        1px 1px 2px black,
+        0 0 1em blue,
+        0 0 0.2em blue;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #3a4553;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+    flex: 1;
+}
+
+.texto {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #232f3e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    max-width: 150px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 60%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 33.33%;
+    flex: 1 0 20%;
+}
+
+#slide1:checked~.carousel-inner {
+    transform: translateX(-87.5%);
+}
+
+#slide2:checked~.carousel-inner {
+    transform: translateX(-75%);
+}
+
+#slide3:checked~.carousel-inner {
+    transform: translateX(-62.5%);
+}
+
+#slide4:checked~.carousel-inner {
+    transform: translateX(-50%);
+}
+
+#slide5:checked~.carousel-inner {
+    transform: translateX(-37.5%);
+}
+
+#slide6:checked~.carousel-inner {
+    transform: translateX(-25%);
+}
+
+#slide7:checked~.carousel-inner {
+    transform: translateX(-12.5%);
+}
+
+#slide8:checked~.carousel-inner {
+    transform: translateX(0%);
+}
+
+.carousel-inner img {
+    width: 25vw;
+    border-radius: 100px;
+}
+
+.carousel label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        display: none;
+    }
+}
+
+
+
+
+

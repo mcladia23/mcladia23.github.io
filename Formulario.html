@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Música</title>
+    <link rel="stylesheet" href="./styles/styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Dancing+Script:wght@400..700&family=IM+Fell+DW+Pica+SC&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="titulo">Formulario</h1>
+        <svg class="animated-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <circle cx="50" cy="50" r="40" />
+        </svg>
+    </header>
+    <nav>
+        <a href="./index.html">Página principal</a>
+        <a href="#">Mi Biblioteca</a>
+        <a href="./Contacto.html">Contacto</a>
+    </nav>
+    <main>
+        <div class="form-container">
+            <form action="/submit" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z\s]+"
+                    title="Solo letras y espacios permitidos"><br><br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required pattern="[A-Za-z\s]+"
+                    title="Solo letras y espacios permitidos"><br><br>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="\d{9,15}"
+                    title="Debe contener entre 9 y 15 dígitos"><br><br>
+
+                <label for="genero">Género Musical Favorito:</label><br>
+                <input type="radio" id="rock" name="genero" value="rock" required>
+                <label for="rock">Rock</label><br>
+                <input type="radio" id="pop" name="genero" value="pop">
+                <label for="pop">Pop</label><br>
+                <input type="radio" id="jazz" name="genero" value="jazz">
+                <label for="jazz">Jazz</label><br>
+                <input type="radio" id="clasica" name="genero" value="clasica">
+                <label for="clasica">Clásica</label><br><br>
+
+                <label for="artista_favorito">Artista Favorito:</label>
+                <input type="text" id="artista_favorito" name="artista_favorito" required pattern="[A-Za-z\s]+"
+                    title="Solo letras y espacios permitidos"><br><br>
+
+                <label for="album_favorito">Álbum Favorito:</label>
+                <input type="text" id="album_favorito" name="album_favorito" required pattern="[A-Za-z0-9\s]+"
+                    title="Solo letras, números y espacios permitidos"><br><br>
+
+                <label for="cancion_favorita">Canción Favorita:</label>
+                <input type="text" id="cancion_favorita" name="cancion_favorita" required pattern="[A-Za-z0-9\s]+"
+                    title="Solo letras, números y espacios permitidos"><br><br>
+
+                <label for="plataforma">Plataforma de Música Preferida:</label>
+                <select id="plataforma" name="plataforma" required>
+                    <option value="spotify">Spotify</option>
+                    <option value="apple-music">Apple Music</option>
+                    <option value="youtube-music">YouTube Music</option>
+                </select><br><br>
+
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="500"
+                    title="Máximo 500 caracteres"></textarea><br><br>
+
+                <label for="consentimiento">
+                    <input type="checkbox" id="consentimiento" name="consentimiento" required>
+                    Acepto que mis datos sean almacenados y utilizados de acuerdo con la política de privacidad.
+                </label><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi Página de Música. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
