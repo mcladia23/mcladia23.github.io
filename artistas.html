@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Grandes Artistas de la Música</title> 
+
+    <!-- Enlace al archivo CSS para los estilos -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- Conexiones para cargar fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importación de fuentes personalizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&
+    family=Cormorant+Upright:wght@300;400;500;600;700&
+    family=Dancing+Script:wght@400..700&
+    family=IM+Fell+DW+Pica+SC&
+    family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&
+    family=Poppins:wght@100;200;300;400;500;600;700;800;900&
+    family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&
+    display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabecera con título y menú de navegación -->
+    <header>
+        <h1>Grandes Artistas de la Historia</h1> <!-- Título principal de la página -->
+
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./historia.html">Historia de la Música</a></li>
+                <li><a href="./estilos.html">Estilos Musicales</a></li>
+                <li><a href="./Formulario.html">Tus Preferencias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenedor de la galería de artistas -->
+        <div class="gallery-container">
+            <!-- Inputs de radio para controlar los slides de la galería -->
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+
+            <!-- Contenido de la galería: Cada artista tiene su propio bloque -->
+            <div class="gallery-item item1">
+                <h3>🎼 Beethoven</h3>
+                <p>Compositor icónico de la música clásica.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sfurx1H9gIg"
+                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="gallery-item item2">
+                <h3>🎸 The Beatles</h3>
+                <p>Revolucionaron el rock con su talento y creatividad.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GDhAgTNQg3E"
+                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="gallery-item item3">
+                <h3>👑 Michael Jackson</h3>
+                <p>El "Rey del Pop", con una carrera legendaria.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/p3Px50isvKw"
+                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="gallery-item item4">
+                <h3>🎤 Madonna</h3>
+                <p>Ícono de la música pop y la innovación.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fhFFtLh6YUU"
+                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="gallery-item item5">
+                <h3>🎶 Queen</h3>
+                <p>La banda que definió el rock con su estilo único.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ujvygsXWkzY"
+                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Controles de navegación para seleccionar un artista -->
+            <div class="gallery-controls">
+                <label for="slide1">Beethoven</label>
+                <label for="slide2">The Beatles</label>
+                <label for="slide3">Michael Jackson</label>
+                <label for="slide4">Madonna</label>
+                <label for="slide5">Queen</label>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Historia de la Música. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
