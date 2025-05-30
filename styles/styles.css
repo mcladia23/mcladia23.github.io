@@ -25,11 +25,15 @@ body {
     }
 }
 
-
-
 body.dark-mode {
     color: #fff;
     background: linear-gradient(90deg, #1a1a1a, #3a0519);
+}
+
+body.dark-mode header h1 {
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Tipografía */
@@ -109,7 +113,6 @@ nav ul li a:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(239, 136, 173, 0.6);
 }
-
 /* Modo oscuro - Navegación */
 body.dark-mode nav {
     background-color: rgba(20, 20, 20, 0.9);
@@ -317,4 +320,13 @@ footer {
 footer p {
     margin: 0;
     font-size: 1.1rem;
+}
+
+body.dark-mode footer {
+    background: linear-gradient(45deg, #1a1a1a, #1c020c);
+    color: #f9ce20;
+    box-shadow: 0 4px 10px rgba(255, 136, 173, 0.5);
+}
+body.dark-mode footer{
+    animation: glowEffect 2s infinite alternate;
 }
