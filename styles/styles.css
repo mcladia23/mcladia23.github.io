@@ -1,0 +1,320 @@
+/* Estilos Generales */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(90deg, #3A0519, #670D2F);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/*Animaciones*/
+.reveal, header h1{
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+body.dark-mode {
+    color: #fff;
+    background: linear-gradient(90deg, #1a1a1a, #3a0519);
+}
+
+/* Tipografía */
+h1, h2 {
+    font-family: "IM Fell DW Pica SC", serif;
+}
+
+h3 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(30);
+}
+
+/* Cabecera */
+header {
+    text-align: center;
+    background: linear-gradient(45deg, #A53860, #EF88AD);
+    padding: 10px;
+    color: white;
+    font-size: 1.9rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Modo oscuro - Cabecera */
+body.dark-mode header {
+    background: linear-gradient(45deg, #1a1a1a, #3a0519);
+    color: #f9ce20;
+    box-shadow: 0 4px 10px rgba(255, 136, 173, 0.5);
+}
+body.dark-mode header h1 {
+    animation: glowEffect 2s infinite alternate;
+}
+
+/* Efectos de brillo */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 2px 2px 5px #ffcc00, 0 0 10px #ff0040;
+    }
+    100% {
+        text-shadow: 2px 2px 10px #ff0040, 0 0 15px #ffcc00;
+    }
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(58, 5, 25, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #EF88AD;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(239, 136, 173, 0.6);
+}
+
+/* Modo oscuro - Navegación */
+body.dark-mode nav {
+    background-color: rgba(20, 20, 20, 0.9);
+}
+
+body.dark-mode a {
+    color: #f4d869;
+    text-shadow: 1px 1px 3px #ff6600, 0 0 1em #ff0040;
+}
+
+/* Secciones generales */
+.intro, .genres, .decades, .artists, .contact-form {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #A53860;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+
+/* Evolución por Décadas */
+.decades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-container {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    text-align: center;
+}
+
+.image-container img {
+    width: 60%;
+    max-width: 300px;
+}
+
+/* Fondos de cada década */
+.decade {
+    background-color: #EF88AD;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #3A0519;
+}
+
+.decade:hover {
+    background-color: #FFC65B;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(255, 198, 91, 0.6);
+}
+
+/* Títulos dentro de las secciones */
+.decade h3 {
+    color: #670D2F;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Botones */
+input[type="submit"] {
+    background-color: #A53860;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #EF88AD;
+    transition: 0.3s;
+}
+
+/* Formulario */
+form {
+    width: 60%;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    color: #EF88AD;
+    display: block;
+    margin-top: 15px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #A53860;
+    border-radius: 5px;
+    background-color: #3A0519;
+    color: white;
+    font-size: 1rem;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #EF88AD;
+    outline: none;
+    box-shadow: 0 0 8px rgba(239, 136, 173, 0.8);
+}
+
+/* Modo oscuro - Formulario */
+body.dark-mode .form-container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 136, 173, 0.5);
+}
+
+body.dark-mode .form-container input,
+body.dark-mode .form-container textarea,
+body.dark-mode .form-container select {
+    background-color: #333;
+    border: 1px solid #ff0040;
+}
+
+/* Contenedor de la galería */
+.gallery-container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #A53860;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* Oculta los elementos que no están activos */
+.gallery-item {
+    display: none;
+    padding: 30px;
+    background-color: #EF88AD;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Muestra solo el slide activo */
+#slide1:checked~.item1 {
+    display: block;
+}
+#slide2:checked~.item2 {
+    display: block;
+}
+#slide3:checked~.item3 {
+    display: block;
+}
+#slide4:checked~.item4 {
+    display: block;
+}
+#slide5:checked~.item5 {
+    display: block;
+}
+
+/* Controles de navegación */
+.gallery-controls {
+    margin-top: 20px;
+}
+
+.gallery-controls label {
+    background-color: #A53860;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery-controls label:hover {
+    background-color: #FFC65B;
+}
+#slide1:checked~.item1 {
+    display: block;
+}
+#slide2:checked~.item2 {
+    display: block;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #3A0519;
+    color: #EF88AD;
+    padding: 20px;
+    font-size: 1rem;
+    border-top: 3px solid #A53860;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
